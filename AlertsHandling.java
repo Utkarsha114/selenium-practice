@@ -15,19 +15,23 @@ public class AlertsHandling {
 		driver.manage().window().maximize();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		
-//		WebElement alertbtn = driver.findElement(By.xpath("//button[@id='alertBtn']"));
-//		alertbtn.click();
+		
+		// example of alert button
+		WebElement alertbtn = driver.findElement(By.xpath("//button[@id='alertBtn']"));
+		alertbtn.click();
 		
 		Thread.sleep(3000);
 		
-//		Alert al = driver.switchTo().alert();
-//		System.out.println(al.getText());    //Prints alert message in console
-//		
-//		//al.accept(); //ok
-//		al.dismiss(); //cancel
+		Alert al = driver.switchTo().alert();
+		System.out.println(al.getText());    //Prints alert message in console
+		
+		//al.accept(); //ok
+		al.dismiss(); //cancel
 		// sendKeys is also used in alert.
 		
 		
+		
+		// example of confirm button
 		WebElement confirmbtn = driver.findElement(By.id("confirmBtn"));
 		confirmbtn.click();
 		
