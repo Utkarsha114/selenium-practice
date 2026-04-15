@@ -16,6 +16,7 @@ public class RegisterPage {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demo.automationtesting.in/Register.html");
+		// or refer https://vinothqaacademy.com/demo-site/
 		
 		Thread.sleep(3000);
 		
@@ -41,12 +42,24 @@ public class RegisterPage {
 		WebElement hobbies = driver. findElement(By.id("checkbox2"));
 		hobbies.click();
 		
+		
+		// language
 		WebElement languages = driver.findElement(By.id("msdd"));
 		languages.click();
+		 
+		// to display languages in console using findElements
+		List<WebElement> li = driver.findElements(By.xpath("//li[@class='ng-scope']"));
+		for(int i=0; i<li.size();i++) {
+			System.out.println(li.get(i).getText());
+		}
 		
+		// use equals method to access the element of a language
+		// to click a particular element
 		WebElement option = driver.findElement(By.xpath("//a[text()='Catalan']"));
 		option.click();
 		
+		
+		// skills
 		WebElement skills = driver.findElement(By.id("Skills"));
 		Select s1 = new Select(skills);
 		List<WebElement> list1 = s1.getOptions();

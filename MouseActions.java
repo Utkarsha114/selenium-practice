@@ -61,7 +61,7 @@ public class MouseActions {
 		Thread.sleep(1000);
 		
 		// toolTip using mouse 
-		WebElement mousehover = driver.findElement(By.id("tooltipTtarget"));
+		WebElement mousehover = driver.findElement(By.id("tooltipTarget"));
 		act.moveToElement(mousehover).perform();
 		
 		Thread.sleep(1000);
