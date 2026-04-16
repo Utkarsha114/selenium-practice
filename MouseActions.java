@@ -14,7 +14,7 @@ public class MouseActions {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
-		driver.get("https://vinothqaacademy.com/mouse-event/");
+		driver.get("https://vinothqaacademy.com/multiple-windows/");
 		Actions act = new Actions(driver); //constructor. new keyword means a class. so actions is a class. driver is element of web.
 		
 	
