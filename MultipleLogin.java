@@ -22,7 +22,7 @@ public class MultipleLogin {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(" https://demo.guru99.com/V1/index.php");
+		driver.get("https://demo.guru99.com/V1/index.php");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -63,6 +63,9 @@ public class MultipleLogin {
 			 else {
 				 System.out.println("Login Fail");
 			 }
+			 
+			 WebElement logout = driver.findElement(By.cssSelector("a[href='Logout.php']"));
+			 logout.click();
 		}
 	}
 
