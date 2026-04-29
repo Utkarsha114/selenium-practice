@@ -26,7 +26,7 @@ public class MultipleLogin {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		for(int i=0; i<3; i++) // when i=1
+		for(int i=0; i<5; i++) // when i=1
 		{
 			String uname = data[i][0];
 			String pwd = data[i][1];
